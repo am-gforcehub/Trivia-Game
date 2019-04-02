@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "pencil";
+    src:url("../images/kg-blank-space.ketch.ttf") format("truetype");
+}
+body {
+    background: url("../images/question-marks-background-yioeG4XpTresized.jpg") no-repeat;
+    background-size: 600px;
+    width: 100%;
+    position: fixed;
+
+    
+}
+
+.container {
+    display: block;
+}
+
+h1 { 
+    font-family: "pencil";
+    font-size: 36px;
+    padding-bottom: 25px;
+    margin-top: 100px;
+    text-align: center;
+    margin-left: 400px;
+
+
+}
+
+.img-initial {
+    background: url("../images/piqxpr7i9.gif") no-repeat center top;
+    background-size: 150px;
+    height: 200px;
+}
+
+.start-btn {
+    width: 200px;
+    color:white;
+    background: darkgrey;
+    font-size: 24px;
+    font-family: "pencil";
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 450px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50px;
+
+    
+}
