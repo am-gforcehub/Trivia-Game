@@ -30,37 +30,78 @@
 
 
 
-    <div class="container">
+    <div class="container" id="mainTitle">
         <div class="row">
             <div class="col-12">
-                <h1>Random Questions <br><br> A Trivia Game</h1>
+                <h1 class="firstTitle">Random</h1>
+                <p class="secondTitle">Trivia Game<p>
             </div>
         </div>
-        <div class="main">
-            <div class="row start-page">
-                <div class="row img-initial col-sm-12"></div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="start-btn">Start</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="row questions-page">
-            <div class='timer text-left col-sm-3'></div>
-            <div class="question col-sm-6"></div>
-            <div class='score text-right col-sm-3'>
-                <div class="right"></div>
-                <div class="wrong"></div>
-            </div>
-        </div>
-        <div class="row answers"></div>
-        <div class="row reset-button"></div>
     </div>
 
+    <div class="container">
+        <div class="row" id="gameField">
+            <div class="row" id="mainPage">
+                <div id="intro" class="h2 col-xs-12 col-md-8 col-md-push-2 col-lg-8 col-lg-push-2 text-center">
+                    <h1 class="thirdTitle">Welcome to Random Trivia!</h1>
+                    <p class="gameDescrip">A game that tests random people about random things.</p>
+                    <p>Click on the Start button below to begin game.</p>
+                </div>
+
+                <div id="startBtn">
+                    <p><span id="startBtn"
+                            class="btn btn-primary btn-xl col-xs-12 col-md-8 col-md-push-2 col-lg-8 col-lg-push-2 text-center">Click
+                            to Begin Game</span></p>
+                </div>
+            </div>
+
+
+            <!--start-mainPage-->
+            <div class="row" id="questionPage">
+                <div id="timer" class="col-xs-12 col-sm-6 col-md-2 col-lg-2 text-center panel">:20</div>
+                <div id="question" class="h2 col-lg-8 col-lg-push-2 text-center"></div>
+                <div id="answers">
+                    <p><span class="answer btn btn-primary btn-xl col-lg-8 col-lg-push-2" id="0" data-answer="0"></span>
+                    </p>
+                    <p><span class="answer btn btn-primary btn-xl col-lg-8 col-lg-push-2" id="1" data-answer="1"></span>
+                    </p>
+                    <p><span class="answer btn btn-primary btn-xl col-lg-8 col-lg-push-2" id="2" data-answer="2"></span>
+                    </p>
+                    <p><span class="answer btn btn-primary btn-xl col-lg-8 col-lg-push-2" id="3" data-answer="3"></span>
+                    </p>
+                </div>
+            </div>
+            <!--questionPage-->
+            <div class="row" id="answerPage">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-push-2 col-lg-8 col-lg-push-2">
+                        <button class="btn btn-primary btn-block" id="nextQuestion">Next Question</button>
+                    </div>
+                </div>
+                <div id="answer" class="h2 col-xs-12 col-md-8 col-md-push-2 col-lg-8 col-lg-push-2"></div>
+                <div id="answer-img"></div>
+                <div id="answer-quote"></div>
+            </div>
+            <!--answerPage-->
+            <div class="row" id="scorePage">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8 col-md-push-2 col-lg-8 col-lg-push-2">
+                        <button id="reset" class="btn btn-primary btn-block">Play Again</button>
+                    </div>
+                </div>
+                <div class="h2 text-center col-xs-12 col-md-8 col-md-push-2 col-lg-8 col-lg-push-2">
+                    <p>Correct Answers: <span class="scoreboard" id="score-correct"></span></p>
+                    <p>Wrong Answers: <span class="scoreboard" id="score-incorrect"></span></p>
+                    <p>Unanswered Questions: <span class="scoreboard" id="score-unanswered"></span></p>
+                    <p>Grade: <span class="scoreboard" id="score-grade"></span></p>
+                </div>
+                <!--scorePage-->
+            </div>
+            <!--Main row for scorePage-->
+        </div>
+        <!--gameField-->
+    </div>
+    <!--container-->
 
     <!-- Loser
     https://media.giphy.com/media/GW10shdM3oXok/giphy.gif
