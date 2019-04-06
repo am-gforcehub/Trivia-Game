@@ -104,9 +104,12 @@ $(document).ready(function () {
         }
     });
 
-    $("body").on("click", ".reset-button", function (event) {
-        event.preventDeault();
+    $("body").on("click", ".reset-btn", function (event) {
+        // event.preventDeault();
         resetGame();
+
+        // $(".final").css("visibility", "hidden");
+
 
     });
 
@@ -192,16 +195,17 @@ $(document).ready(function () {
             .html("<p>All done, heres how you did!<p><br><br>")
             .append("<p>Correct Answers: " + correctCounter + "</p><br>")
             .append("<p> Wrong Answers: " + incorrectCounter + "</p><br>")
-            .append("<p> Unanswered: " + unansweredCounter + "</p>");
+            .append("<p> Unanswered: " + unansweredCounter + "</p><br>");
         $(final).attr("<div>");
         $(final).attr("class", "final");
-        $(".final").append('<p><a class="btn btn - primary btn - lg reset-button" href = "#" > Restart the game!</a ></p > ');
-        $("reset-button").on("click", startGame());
-
+        $(".final").append('<p><a class=".reset-btn" href = "#" >RESTART GAME</a ></p > ');
     }
+
+
 
     //Reset the game
     function resetGame() {
+
         counter = 0;
         correctCounter = 0;
         incorrectCounter = 0;
@@ -209,5 +213,8 @@ $(document).ready(function () {
         timer = 30;
         startGame();
         timerHolder();
+        // $(".start-page").css("visibility", "visible");
+
+
     }
 });
