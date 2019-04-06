@@ -11,8 +11,7 @@ $(document).ready(function () {
                 { answer: "1024 megapixels", value: false },
                 { answer: "600 megapixels", value: false },
             ]
-
-            // photo: "assets/images/eye-2771174_1920.jpg",
+            // photo: "assets/images/eye-2771174_1920.jpg"
         },
         {
             question: "What was the first planet to be discovered using the telescope?",
@@ -23,7 +22,7 @@ $(document).ready(function () {
                 { answer: "Mars", value: false },
             ]
 
-            // photo: "assets/images/eye-2771174_1920.jpg",
+            // photo: "assets/images/eye-2771174_1920.jpg"
         },
         {
             question: "Who averaged one patent for every three weeks of their life?",
@@ -65,7 +64,7 @@ $(document).ready(function () {
     var game;
     var counter = 0;
     var clock;
-    var timer = 30;
+    var timer = 20;
     var correctCounter = 0;
     var incorrectCounter = 0;
     var unansweredCounter = 0;
@@ -76,7 +75,6 @@ $(document).ready(function () {
     //Start the game when START button clicked
 
     $(".answers").css("visibility", "hidden");
-    console.log(".answers");
     $("body").on("click", ".start-btn", function (event) {
         event.preventDefault();
         startGame();
@@ -85,7 +83,6 @@ $(document).ready(function () {
     });
 
     $("body").on("click", ".answer", function (event) {
-        console.log($(this));
         chosenAnswer = $(this).text();
         var answerCounter = questions[counter].answers;
 
@@ -106,20 +103,25 @@ $(document).ready(function () {
         }
     });
 
+    // ("body").on("click", "reset-btn", function (event) {
+    //     event.preventDefault();
+    //     resetGame();
+
+    // });
 
 
     function rightAnswer() {
         correctCounter++;
         $(".time").html(timer);
         $(".right").html("<p>Right Answers: " + correctCounter + "<p/><br>");
-        setTimeout(questionCounter, 2000);
+        setTimeout(questionCounter, 1000);
 
     }
     function wrongAnswer() {
         incorrectCounter++;
         $(".time").html(timer);
         $(".wrong").html("<p>Wrong Answers: " + incorrectCounter + "<p/><br>");
-        setTimeout(questionCounter, 2000);
+        setTimeout(questionCounter, 1000);
 
     }
     function unanswered() {
@@ -127,15 +129,15 @@ $(document).ready(function () {
         $(".main").append("<p class='times-up'>Time's up!</p>");
         $(".right-answer").css("background-color", "greenyellow");
         $(".times-up")
-            .delay(2000)
+            .delay(1000)
             .fadeOut(400);
-        setTimeout(questionCounter, 2000);
+        setTimeout(questionCounter, 1000);
     }
     //Start Game
     function startGame() {
         $(".start-page").css("display", "none");
         $(".questions-page").css("visibility", "visible");
-        $(".timer").html("<p>Time remaining: <span class='time'>30</span></p>");
+        $(".timer").html("<p>Time remaining: <span class='time'>20</span></p>");
 
         $(".question").html(questions[counter].question);
         var showingAnswers =
@@ -159,7 +161,7 @@ $(document).ready(function () {
         if (counter < 4) {
             counter++
             startGame();
-            timer = 30;
+            timer = 20;
             timerHolder();
         } else {
             finishGame();
@@ -192,16 +194,7 @@ $(document).ready(function () {
             .append("<p> Unanswered: " + unansweredCounter + "</p><br>");
         $(final).attr("<div>");
         $(final).attr("class", "final");
-        $(".final").append('<p><a class=".reset-btn" href = "#" >RESTART GAME</a ></p > ');
-
-        $(".reset-btn").on("click", function (event) {
-            event.preventDeault();
-            resetGame();
-
-            // $(".final").css("visibility", "hidden");
-
-
-        });
+        // $(".final").append('<p><a class=".reset-btn" href = "#" >RESTART GAME</a ></p > ');
 
     }
 
@@ -214,10 +207,9 @@ $(document).ready(function () {
         correctCounter = 0;
         incorrectCounter = 0;
         unansweredCounter = 0;
-        timer = 30;
+        timer = 20;
         startGame();
         timerHolder();
-
 
     }
 });
