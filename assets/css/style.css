@@ -7,7 +7,6 @@
     src:url("../images/kg-blank-space.olid.ttf") format("truetype");
 }
 body {
-    /* background: url("../images/question-marks-background-yioeG4XpTresized.jpg"); */
     background-size: 70px;
     font-family: "pencil";
     background-color: blueviolet;
@@ -87,6 +86,8 @@ margin-bottom: 30px;
 color: grey;
 margin: 0;
 padding: 0;
+
+
 }
 
 .score {
