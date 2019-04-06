@@ -31,7 +31,6 @@ body {
     text-align: center;
     padding: 30px;
     background-color: #f0f0f0;
-    margin-left: 100px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
 }
@@ -41,7 +40,6 @@ body {
     padding-bottom: 30px;
     text-align: center;
     background-color: #f0f0f0;
-    margin-left: 100px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
 }
@@ -52,7 +50,6 @@ body {
     padding: 30px;
     text-align: center;
     background-color: #f0f0f0;
-    margin-left: 200px;
     margin-top: 50px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
@@ -65,7 +62,6 @@ body {
     padding-top: 10px;
     text-align: center;
     background-color: #f0f0f0;
-    margin-left: 200px;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     
@@ -78,7 +74,7 @@ body {
     font-family: "pencil";
     text-align: center;
     margin-top: 40px;
-    margin-left: 425px;
+    margin-left: 400px;
     cursor: pointer;
     padding: 10px;
     border-radius: 50px;

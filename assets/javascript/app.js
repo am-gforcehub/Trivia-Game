@@ -1,74 +1,76 @@
-//questions stored as an array of objects 
-
-var questions = [
-    {
-        question: "What is the resolution of the human eye?",
-        answers: [
-            { answer: "576 megapixels", value: true },
-            { answer: "820 megapixels", value: false },
-            { answer: "1024 megapixels", value: false },
-            { answer: "600 megapixels", value: false },
-        ]
-
-        // photo: "assets/images/eye-2771174_1920.jpg",
-    },
-    {
-        question: "What was the first planet to be discovered using the telescope?",
-        answers: [
-            { answer: "Earth", value: false },
-            { answer: "Uranus", value: true },
-            { answer: "Jupiter", value: false },
-            { answer: "Mars", value: false },
-        ]
-
-        // photo: "assets/images/eye-2771174_1920.jpg",
-    },
-    {
-        question: "Who averaged one patent for every three weeks of their life?",
-        answers: [
-            { answer: "Henry Ford", value: false },
-            { answer: "Alexander Graham Bell", value: false },
-            { answer: "Albert Einstein", value: false },
-            { answer: "Thomas Edison", value: true },
-        ]
-
-        // photo: "assets/images/eye-2771174_1920.jpg",
-    },
-    {
-        question: "Emerald is the birthstone for what month?",
-        answers: [
-            { answer: "May", value: true },
-            { answer: "August", value: false },
-            { answer: "January", value: false },
-            { answer: "March", value: false },
-        ]
-
-        // photo: "assets/images/eye-2771174_1920.jpg",
-    },
-    {
-        question: "What is the least expensive and most popular fruit?",
-        answers: [
-            { answer: "apples", value: false },
-            { answer: "bananas", value: true },
-            { answer: "kiwis", value: false },
-            { answer: "watermelon", value: false },
-        ]
-
-        // photo: "assets/images/eye-2771174_1920.jpg",
-    }
-
-];
-
-//Global variables
-var game;
-var counter = 0;
-var clock;
-var timer = 30;
-var correctCounter = 0;
-var incorrectCounter = 0;
-var unansweredCounter = 0;
-
 $(document).ready(function () {
+
+    //questions stored as an array of objects 
+
+    var questions = [
+        {
+            question: "What is the resolution of the human eye?",
+            answers: [
+                { answer: "576 megapixels", value: true },
+                { answer: "820 megapixels", value: false },
+                { answer: "1024 megapixels", value: false },
+                { answer: "600 megapixels", value: false },
+            ]
+
+            // photo: "assets/images/eye-2771174_1920.jpg",
+        },
+        {
+            question: "What was the first planet to be discovered using the telescope?",
+            answers: [
+                { answer: "Earth", value: false },
+                { answer: "Uranus", value: true },
+                { answer: "Jupiter", value: false },
+                { answer: "Mars", value: false },
+            ]
+
+            // photo: "assets/images/eye-2771174_1920.jpg",
+        },
+        {
+            question: "Who averaged one patent for every three weeks of their life?",
+            answers: [
+                { answer: "Henry Ford", value: false },
+                { answer: "Alexander Graham Bell", value: false },
+                { answer: "Albert Einstein", value: false },
+                { answer: "Thomas Edison", value: true },
+            ]
+
+            // photo: "assets/images/eye-2771174_1920.jpg",
+        },
+        {
+            question: "Emerald is the birthstone for what month?",
+            answers: [
+                { answer: "May", value: true },
+                { answer: "August", value: false },
+                { answer: "January", value: false },
+                { answer: "March", value: false },
+            ]
+
+            // photo: "assets/images/eye-2771174_1920.jpg",
+        },
+        {
+            question: "What is the least expensive and most popular fruit?",
+            answers: [
+                { answer: "apples", value: false },
+                { answer: "bananas", value: true },
+                { answer: "kiwis", value: false },
+                { answer: "watermelon", value: false },
+            ]
+
+            // photo: "assets/images/eye-2771174_1920.jpg",
+        }
+
+    ];
+
+    //Global variables
+    var game;
+    var counter = 0;
+    var clock;
+    var timer = 30;
+    var correctCounter = 0;
+    var incorrectCounter = 0;
+    var unansweredCounter = 0;
+
+
 
 
     //Start the game when START button clicked
@@ -104,14 +106,6 @@ $(document).ready(function () {
         }
     });
 
-    $("body").on("click", ".reset-btn", function (event) {
-        // event.preventDeault();
-        resetGame();
-
-        // $(".final").css("visibility", "hidden");
-
-
-    });
 
 
     function rightAnswer() {
@@ -199,6 +193,16 @@ $(document).ready(function () {
         $(final).attr("<div>");
         $(final).attr("class", "final");
         $(".final").append('<p><a class=".reset-btn" href = "#" >RESTART GAME</a ></p > ');
+
+        $(".reset-btn").on("click", function (event) {
+            event.preventDeault();
+            resetGame();
+
+            // $(".final").css("visibility", "hidden");
+
+
+        });
+
     }
 
 
@@ -213,7 +217,6 @@ $(document).ready(function () {
         timer = 30;
         startGame();
         timerHolder();
-        // $(".start-page").css("visibility", "visible");
 
 
     }
